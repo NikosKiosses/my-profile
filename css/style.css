@@ -1,0 +1,45 @@
+body {
+    background-color: blue;
+    }
+
+    h1 {
+        color: azure;
+        text-align: center;
+        }
+
+.center-text {
+text-align: center;
+color: azure;
+}
+
+
+        img {
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+        }
+
+        .card1 {
+            border-style: solid; color: azure; 
+            text-align: left;   
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .card2 {
+            border-style: solid; color: azure; 
+            text-align: left;   
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .card3 {
+            border-style: solid; color: azure; 
+            text-align: left;   
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .linkedin {
+            text-align: center;
+            color: azure;
+        }
