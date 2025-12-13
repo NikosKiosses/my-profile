@@ -1,45 +1,71 @@
-body {
-    background-color: #3F72AF;
-    }
-
-    h1 {
-        color: #DBE2EF;
-        text-align: center;
-        }
-
-.center-text {
-text-align: center;
-color: #DBE2EF;
+:root {
+--bg-color: rgb(3, 57, 108);
+--secondary-bg-color: rgb(0,91,150);
+--primary-text-color: rgb(179,205,224);
+--secondary-text-color: rgb(213, 231, 244);
+--btn-color: rgb(1,31,75);
+--btn-text-color: rgb(179,205,224);
+--connection-line-color: rgb(220, 220, 220);
+--connection-dot-color: rgb(160, 160, 160);
+--icon-color: #434343;
+ --shadow-color: 210deg 100% 10%;
+  --shadow-elevation-low:
+    0.4px 0.4px 0.7px hsl(var(--shadow-color) / 0.27),
+    0.7px 0.7px 1.2px -0.9px hsl(var(--shadow-color) / 0.33),
+    1.7px 1.7px 2.9px -1.9px hsl(var(--shadow-color) / 0.39);
+  --shadow-elevation-medium:
+    0.4px 0.4px 0.7px hsl(var(--shadow-color) / 0.29),
+    1.5px 1.6px 2.7px -0.6px hsl(var(--shadow-color) / 0.33),
+    3.6px 3.6px 6.2px -1.3px hsl(var(--shadow-color) / 0.38),
+    8.4px 8.5px 14.5px -1.9px hsl(var(--shadow-color) / 0.42);
+  --shadow-elevation-high:
+    0.4px 0.4px 0.7px hsl(var(--shadow-color) / 0.27),
+    3px 3px 5.2px -0.3px hsl(var(--shadow-color) / 0.29),
+    5.5px 5.5px 9.5px -0.5px hsl(var(--shadow-color) / 0.31),
+    8.6px 8.7px 14.9px -0.8px hsl(var(--shadow-color) / 0.33),
+    13.2px 13.3px 22.8px -1.1px hsl(var(--shadow-color) / 0.35),
+    20px 20.1px 34.5px -1.4px hsl(var(--shadow-color) / 0.37),
+    29.7px 29.9px 51.2px -1.6px hsl(var(--shadow-color) / 0.39),
+    43.1px 43.3px 74.2px -1.9px hsl(var(--shadow-color) / 0.41);
 }
 
+html {
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
 
-        img {
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-        }
+body {
+margin: auto;
+text-align: center;
+font-family: "Inter", sans-serif;
+letter-spacing: -.5px;
+}
 
-        .card1 {
-            border-style: solid; color: #DBE2EF; 
-            text-align: left;   
-            border-radius: 10px;
-            padding: 5px;
-        }
+img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+}
 
-        .card2 {
-            border-style: solid; color: #DBE2EF; 
-            text-align: left;   
-            border-radius: 10px;
-            padding: 5px;
-        }
-        .card3 {
-            border-style: solid; color: #DBE2EF; 
-            text-align: left;   
-            border-radius: 10px;
-            padding: 5px;
-        }
+h1 {
+color: var(--primary-text-color);
+font-size: 1,5 rem;
+font-size: clamp(1.5rem, 1.457142857142857rem + 0.2142857142857143vw, 1.8rem);
+margin-bottom: 0.5rem;
+}
 
-        .linkedin {
-            text-align: center;
-            color: #DBE2EF;
-        }
+h2 {
+color: var(--primary-text-color);
+font-size: 1.1rem;
+font-size: clamp(1.1rem, 1.0571428571428572rem + 0.21428571428571416vw, 1.4rem);
+font-weight: 500;
+}
+
+b {
+color: var(--primary-text-color);
+font-size: 1rem;
+font-size: clamp(1rem, 0.9571428571428572rem + 0.2142857142857143vw, 1.3rem);
+line-height: 1.5;
+}
