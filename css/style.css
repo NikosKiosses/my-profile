@@ -69,3 +69,11 @@ font-size: 1rem;
 font-size: clamp(1rem, 0.9571428571428572rem + 0.2142857142857143vw, 1.3rem);
 line-height: 1.5;
 }
+
+.Om-mig p {
+font-size: 0.9rem;
+    font-size: clamp(0.9rem, 0.8714285714285714rem + 0.1428571428571429vw, 1.1rem);
+    margin-top: 0rem;
+    color: var(--secondary-text-color);
+    text-align: left;
+}
