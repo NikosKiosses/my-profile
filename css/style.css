@@ -88,3 +88,9 @@ font-size: 0.9rem;
     max-width: 800px;
     box-shadow: var(--box-shadow-1);
 }
+
+h2-position {
+    width: fit-content;
+    margin: 1%; 0 1.6rem 0;
+}
+
