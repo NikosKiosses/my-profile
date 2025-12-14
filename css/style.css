@@ -1,14 +1,26 @@
 :root {
---bg-color: rgb(3, 57, 108);
---secondary-bg-color: rgb(0,91,150);
---primary-text-color: rgb(179,205,224);
---secondary-text-color: rgb(213, 231, 244);
---btn-color: rgb(1,31,75);
---btn-text-color: rgb(179,205,224);
---connection-line-color: rgb(220, 220, 220);
---connection-dot-color: rgb(160, 160, 160);
---icon-color: #434343;
- --shadow-color: 210deg 100% 10%;
+  --bg-color: rgb(3, 57, 108);
+  --secondary-bg-color: rgb(0, 91, 150);
+
+  --primary-text-color: rgb(179,205,224);
+  --secondary-text-color: rgb(213, 231, 244);
+
+  --btn-color: rgb(1,31,75);
+  --btn-text-color: rgb(179,205,224);
+
+  --connection-line-color: rgb(220, 220, 220);
+  --connection-dot-color: rgb(160, 160, 160);
+  --icon-color: #434343;
+
+  
+  --om-mig-bg: #006F8E;
+  --erfarenhet-bg: #004F6B;
+  --utbildning-bg: #006B98;
+
+ 
+  --card-bg: var(--secondary-bg-color);
+
+  --shadow-color: 210deg 100% 10%;
   --shadow-elevation-low:
     0.4px 0.4px 0.7px hsl(var(--shadow-color) / 0.27),
     0.7px 0.7px 1.2px -0.9px hsl(var(--shadow-color) / 0.33),
@@ -30,155 +42,161 @@
 }
 
 html {
-    background-color: var(--bg-color);
-    scroll-behavior: smooth;
-    font-size: 16px;
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-margin: auto;
-text-align: center;
-font-family: "Inter", sans-serif;
-letter-spacing: -.5px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.5px;
+  text-align: center;
 }
 
 img {
-max-width: 100%;
-height: auto;
-display: block;
-margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.14);
+  width: min(520px, 92%);
+  margin: 1rem auto;
 }
 
 h1 {
-color: var(--primary-text-color);
-font-size: 1,5 rem;
-font-size: clamp(1.5rem, 1.457142857142857rem + 0.2142857142857143vw, 1.8rem);
-margin-bottom: 0.5rem;
+  color: var(--primary-text-color);
+  font-size: clamp(1.5rem, 1.457142857142857rem + 0.2142857142857143vw, 1.8rem);
+  margin: 0.5rem 0 0.5rem;
 }
 
 h2 {
-color: var(--primary-text-color);
-font-size: 1.1rem;
-font-size: clamp(1.1rem, 1.0571428571428572rem + 0.21428571428571416vw, 1.4rem);
-font-weight: 500;
+  color: var(--primary-text-color);
+  font-size: clamp(1.1rem, 1.0571428571428572rem + 0.21428571428571416vw, 1.4rem);
+  font-weight: 600;
+  margin: 0;
 }
 
 b {
-color: var(--primary-text-color);
-font-size: 1rem;
-font-size: clamp(1rem, 0.9571428571428572rem + 0.2142857142857143vw, 1.3rem);
-line-height: 1.5;
-}
-
-.Om-mig p {
-font-size: 0.9rem;
-    font-size: clamp(0.9rem, 0.8714285714285714rem + 0.1428571428571429vw, 1.1rem);
-    margin-top: 0rem;
-    color: var(--secondary-text-color);
-    text-align: left;
-}
-
-.Erfarenhet,
-.Om-mig,
-.Utbildning {
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: var(--secondary-bg-color);
-    border: 1px solid rgba(0, 0, 0, .1);
-    max-width: 800px;
-    box-shadow: var(--box-shadow-1);
-}
-
-.h2-position {
-    width: fit-content;
-    margin: 1rem 0 1.6rem 0;
+  color: var(--primary-text-color);
+  font-size: clamp(1rem, 0.9571428571428572rem + 0.2142857142857143vw, 1.3rem);
+  line-height: 1.5;
 }
 
 header {
-background-color: var(--secondary-bg-color);
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    margin-bottom: 1rem;
+  background-color: var(--secondary-bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding-bottom: 0.75rem;
+  box-shadow: var(--shadow-elevation-medium);
 }
 
-.profile-header {
-    text-align: center;
-    margin: 0;
-    padding: 0;
+.profil-header {
+  margin: 0;
+  padding: 0;
 }
 
-.profile-info {
-    display: grid;
-    grid-template-columns: 22% 78%;
-    align-items: center;
-    padding: 1rem;
-    max-width: 600px;
-    margin: auto;
+.profil-info{
+  display: flex;
+  flex-direction: column;   /* <-- ALLTID kolumn */
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.profile-info img {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    max-width: 140px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, .1);
+.profil-info img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: var(--shadow-elevation-low);
 }
 
 .name-wrapper {
-    grid-column: 2;
-    display: grid;
-    grid-template-rows: auto auto;
-    row-gap: 0.2rem;
-    justify-items: center;
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
 }
 
-.name {
-    grid-column: 2;
-    grid-row: 1;
-    align-items: center;
-    justify-content: center
-}
-
-.name h1 {
-    font-size: 1.5rem;
-    font-size: clamp(1.5rem, 1.4285714285714286rem + 0.35714285714285715vw, 2rem);
-}
-
-.tagline {
-    grid-column: 2;
-    grid-row: 2;
-    margin-top: 0;
-    padding: 0;
+@media (min-width: 800px) {
+  .name-wrapper {
+    justify-items: start;
+  }
 }
 
 .tagline p {
-    margin: 0;
-    font-size: 0.8rem;
-    font-size: clamp(0.8rem, 0.7714285714285715rem + 0.14285714285714282vw, 1rem);
-    color: var(--secondary-text-color);
+  margin: 0;
+  font-size: clamp(0.8rem, 0.7714285714285715rem + 0.14285714285714282vw, 1rem);
+  color: var(--secondary-text-color);
 }
 
 .social {
-    border-top: 1px solid rgba(0, 0, 0, .1);
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding: 1rem 0;
-    background: var(--secondary-bg-color);
-    box-shadow: var(--shadow-elevation-high);
-    text-align: center;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .social a {
-    margin: 0 15px;
-    color: var(--primary-text-color);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-size: clamp(0.9rem, 0.8714285714285714rem + 0.1428571428571429vw, 1.1rem);
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 0.8714285714285714rem + 0.1428571428571429vw, 1.1rem);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,.12);
 }
 
 .social a:hover {
-    font-weight: 600;
+  font-weight: 600;
+  background: rgba(0,0,0,.18);
+}
+
+.Om-mig,
+.Erfarenhet,
+.Utbildning {
+  max-width: 900px;
+  margin: 1.25rem auto;
+  padding: 1.75rem;
+  border-radius: 16px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow-elevation-medium);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+
+.Om-mig { --card-bg: var(--om-mig-bg); }
+.Erfarenhet { --card-bg: var(--erfarenhet-bg); }
+.Utbildning { --card-bg: var(--utbildning-bg); }
+
+.h2-position {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.Om-mig p,
+.Erfarenhet li,
+.Utbildning li {
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+.Erfarenhet ul,
+.Utbildning ol {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
 }
