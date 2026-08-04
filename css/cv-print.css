@@ -1,0 +1,79 @@
+@page {
+  size: A4;
+  margin: 13mm 16mm;
+}
+
+html, body {
+  background: #ffffff !important;
+  color: #111111 !important;
+  font-size: 10.5pt;
+  line-height: 1.4;
+}
+
+.no-print { display: none !important; }
+
+.cv-doc {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+a { color: #0a6b52 !important; text-decoration: none; }
+
+.cv-header { margin-bottom: 0.8rem; }
+
+.cv-photo {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+}
+
+.cv-heading h1 { color: #111111 !important; font-size: 18pt; margin-bottom: 0.2rem; }
+
+.cv-role { color: #0a6b52 !important; font-size: 10pt; margin-bottom: 0.4rem; }
+
+.cv-contact { color: #333333 !important; font-size: 8.5pt; }
+
+.cv-section { margin-bottom: 0.7rem; break-inside: avoid; }
+
+.cv-section h2 {
+  color: #0a6b52 !important;
+  border-bottom: 1px solid #ccc !important;
+  font-size: 9pt;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.45rem;
+}
+
+.cv-section > p { color: #222222 !important; font-size: 10pt; }
+
+.cv-entry { break-inside: avoid; margin-bottom: 0.55rem; }
+
+.cv-entry-head h3 { color: #111111 !important; font-size: 10pt; }
+.cv-entry-head { margin-bottom: 0.25rem; }
+
+.cv-dates { color: #555555 !important; font-size: 8.5pt; }
+
+.cv-entry ul { color: #222222 !important; }
+.cv-entry li { font-size: 9.5pt; margin-bottom: 0.1rem; }
+
+.cv-skill-label { color: #555555 !important; }
+.cv-skill-row { margin-bottom: 0.4rem !important; }
+
+.cv-chips li {
+  background: #f2f2f2 !important;
+  border: 1px solid #ddd !important;
+  color: #222222 !important;
+  font-size: 8.5pt;
+  padding: 0.2rem 0.6rem !important;
+}
+
+.cv-project-list { gap: 0.25rem !important; }
+.cv-project-list li { font-size: 9.5pt; color: #222222 !important; }
+.cv-project-list strong { color: #111111 !important; }
+
+.cv-lang-list { gap: 0.3rem !important; }
+.cv-lang-list li { color: #222222 !important; font-size: 9.5pt; }
+.cv-lang-list li span:first-child { color: #111111 !important; }
+.cv-lang-level { color: #555555 !important; }
+
+.cv-footer { display: none !important; }
